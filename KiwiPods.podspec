@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KiwiPods"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Summary"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => 'https://github.com/KiwiTechLLC/KiwiPods.git'}
+  s.source       = { :git => 'https://github.com/agent/KiwiPods.git'}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -107,23 +107,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'LinkLabel' do |linkLabel|
     linkLabel.source_files = "KiwiPods/UILinkLabel/**/*.{h,m,swift}"
-  end
-
-  s.subspec 'Social' do |socialMedia|
-    socialMedia.subspec 'Facebook' do |facebook|
-      facebook.source_files = "KiwiPods/Social/Facebook/**/*.{h,m,swift}"
-      facebook.dependency 'FBSDKLoginKit'
-      facebook.dependency 'FBSDKShareKit'
-    end
-    socialMedia.subspec 'Twitter' do |twitter|
-      twitter.source_files = "KiwiPods/Social/Twitter/**/*.{h,m,swift}"
-      twitter.dependency 'TwitterKit'
-    end
-    socialMedia.subspec 'Google' do |google|
-      google.source_files = "KiwiPods/Social/Google/**/*.{h,m,swift}"
-      google.dependency 'GoogleSignIn'
-      s.framework = 'GoogleSignIn'
-    end
   end
 
   s.subspec 'ImagePicker' do |imagePicker|
