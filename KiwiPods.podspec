@@ -109,13 +109,6 @@ Pod::Spec.new do |s|
     linkLabel.source_files = "KiwiPods/UILinkLabel/**/*.{h,m,swift}"
   end
 
-  s.subspec 'ImagePicker' do |imagePicker|
-    imagePicker.source_files = "KiwiPods/ImagePicker/**/*.{h,m,swift}"
-    imagePicker.dependency 'SDWebImage'
-    imagePicker.dependency 'MBProgressHUD'
-  end
-
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
